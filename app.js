@@ -163,7 +163,7 @@ app.use("*", (req, res) => {
     res.send("Page Note Found");
 })
 
-const port = 3006;
+const port = process.env.PORT || 4000;
 app.listen(port, (req, res) => {
     console.log(`App Is Lisining to Port ${port}`);
 })
