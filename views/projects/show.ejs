@@ -1,0 +1,33 @@
+<%- layout("/layouts/boilerplate") %>
+<body>
+    <div class="show-home">
+        <h2 class="title">
+            <%= projectInfo.title %>
+        </h2>
+        <div class="pro-details">
+            <img src="<%= projectInfo.image %>" alt="Project Image">
+            <div class="pro-description">
+                <li>
+                    <%= projectInfo.description %>
+                </li>
+                <li>
+                    Used Much more 
+                </li>
+                <li>Used Desin For HTML</li>
+            </div>
+        </div>
+    
+        <div class="edit-delete-btn">
+            <form action="/projects/<%= projectInfo._id %>/edit">
+                <!-- <button class="edit-btn">Edit</button> -->
+            </form>
+            <form action="/projects/<%= projectInfo._id %>?_method=DELETE" method="POST">
+                <!-- <button class="del-btn">Delete</button> -->
+            </form>
+    
+            <form action="/projects/<%= projectInfo._id %>/play" method="POST">
+                <button class="play-btn">Play</button>
+            </form>
+        </div>
+    </div>
+</body>

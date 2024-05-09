@@ -1,0 +1,73 @@
+body {
+    background-image: url(/assets/pngtree-simple-background.jpg);
+    background-size: cover;
+}
+
+.main-home {                                
+    display: flex;
+    align-items: center;
+    margin-left:1rem;
+}
+
+.About-head {
+    height: 18rem;
+    width: 25rem;
+    background-image: url(/assets/postit-scrabble-to-do-todo.jpg);
+    background-size:contain;
+}
+
+.About-head h2 {
+    padding-left: 8.5rem;
+    font-size: x-large;
+    font-weight: 600;
+    color: white;
+    
+}
+
+.About-head p {
+    color: black;
+    padding-left: 8.5rem;
+    padding-top: 5rem;
+}
+.main-content {
+   align-items: center;
+   text-align: center;
+   margin-left: 2rem;
+   margin-top: 3rem;
+   height: 30rem;
+   width: 50rem;
+   background-image: url(/assets/img.jpg);
+   background-size: cover;
+}
+
+.main-content h1 {
+   background-color: red;
+   margin-top: 0.1px;
+}
+
+input {
+    height: 2.2rem;
+    width: 20rem;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+.addbtn {
+    height: 2.2rem;
+    border-radius: 10px;
+    margin-left: 1rem;
+    font-weight: 700;
+}
+
+li {
+    color: white;
+    text-align: start;
+    border: 1px solid gray;
+    font-weight: 400;
+}
+
+ul button {
+    font-weight: 700;
+    margin-bottom: 15px;
+    margin-left: 43rem;
+}

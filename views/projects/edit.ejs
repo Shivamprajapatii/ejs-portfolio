@@ -1,0 +1,9 @@
+<%- layout("/layouts/boilerplate") %>
+<body>
+    <h2>Edit Project</h2>
+    <form  method="POST" action="/projects/<%= projectInfo._id %>?_method=PUT">
+        <input type="text"  name="project[title]" id="title" placeholder="Enter Title" value=" <%= projectInfo.title %>"> <br> <br>
+        <input type="text" name="project[image]" id="title" value="<%= projectInfo.image %>"> <br> <br>
+        <textarea name="project[description]" id="description" cols="30" rows="10"> <%= projectInfo.description %></textarea> <br> <br>
+        <button>Submit</button>
+</body>

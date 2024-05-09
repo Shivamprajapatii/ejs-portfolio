@@ -1,0 +1,10 @@
+<%- layout("/layouts/boilerplate") %>
+<body>
+    <h2>Add New Project</h2>
+    <form action="/projects" method="POST">
+        <input type="text" name="project[title]" id="title" placeholder="Enter Title">
+        <input type="text" name="project[link]" id="title" placeholder="Enetr Project Link">
+        <input type="text" name="project[description]" id="title" placeholder="Enetr Description" required>
+        <button>Submit</button>
+    </form>
+</body>

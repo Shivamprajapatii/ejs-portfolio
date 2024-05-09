@@ -1,0 +1,65 @@
+       /* .title {
+        padding-left: 40%;
+    }
+
+    .show-home {
+        padding-left: 32rem;
+        
+    }
+
+    .show-home img {
+        height: 10rem;
+        width: 10rem;
+    }
+
+    .edit-delete-btn {
+        display: flex;
+        
+    }
+
+    .del-btn {
+        margin-left: 1rem;
+    } */
+
+
+.show-home {
+    margin-top: 1rem;
+}
+
+.title {
+    text-align: center;
+    color: #FFA600;
+}
+
+.pro-details {
+    display: flex;
+    align-items: center;
+    margin-left: 15rem;
+}
+
+.pro-details img {
+    height: 14.5rem;
+    width: 14.5rem;
+    display: inline-block;
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0 2px 0.6rem black;
+    transition: 1s;
+}
+
+.pro-details .pro-description {
+    flex: 1;
+    margin-left: 5rem;
+}
+
+.edit-delete-btn {
+    display: flex;
+    align-items: center;
+    margin-left: 35rem;
+}
+.edit-delete-btn .play-btn {
+    background-color: aqua;
+    height: 3rem;
+    width: 15rem;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day One Of 2024</title>
+    <link rel="stylesheet" href="/css/todo.css">
+
+</head>
+
+<body>
+    </nav>
+    <div class="main-home">
+        <aside>
+            <div class="About-head">
+                <h2>08 January</h2>
+            <p>  Hiii...... </p>
+            </div>
+        </aside>  <!--Side Bar -->
+        <div class="main-content">
+            <div class="head">
+                <h1>To Do app</h1>
+                <input type="text" placeholder="Enter Your Task" class="input"> <button class="addbtn">Add task</button>
+                <ul class=".ul">
+                    <li>Eat <button class="delete">delete</button></li>
+                    <li>Code <button class="delete">delete</button></li>
+                </ul>
+            </div>
+        </div> <!--Main Content Close-->
+    </div> <!--  Main Home Close   -->
+
+    <script>
+        let btn = document.querySelector("button");
+let ul = document.querySelector("ul");
+let inp = document.querySelector("input");
+
+
+btn.addEventListener("click", function(){
+    let item = document.createElement("li");
+    item.innerText = inp.value;
+   
+    let delButton = document.createElement("button");
+    delButton.innerText = "delete";
+    delButton.classList.add("delete");
+
+    item.appendChild(delButton);
+    ul.appendChild(item);
+    inp.value = "";
+});
+
+
+ul.addEventListener("click", function(event){
+    if( event.target.nodeName == "BUTTON"){
+        let listItem =  event.target.parentElement;
+        listItem.remove();
+        console.log("Deleted");
+    }
+})
+    </script>
+</body>
+
+</html>

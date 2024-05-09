@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="beta.css">
+</head>
+
+<style>
+
+*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .outerbox {
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(to top left, #3ed8ff, #a8f5ff);
+    }
+    .innerbox {
+        width: 270px;
+        margin: 0 auto;
+        position: relative;
+        top: 40%;
+        transform: translateY(-50%);
+        padding:20px;
+        /* background-color:#ffffffcc; */
+        background: linear-gradient(to top left, #ffffffff, #ffffff33);
+        box-shadow: 3px 3px 5px #2773a5;
+        border-radius: 4px;
+        z-index: 2;
+    }
+    h1{
+        font-size: 2.5rem;
+        color: #212121;
+    }
+.signupheader p {
+    font-size: 0.9rem;
+    color: #555;
+
+}
+.signupbody {
+    margin: 10px 0px;
+
+}
+.signupbody p{
+    margin: 10px;
+}
+.signupbody p label{
+    display: block;
+    font-weight: bold;
+
+}
+.signupbody p input{
+    width: 100%;
+    padding: 2px;
+    border: 2px solid #cccc;
+    border-radius: 3px;
+
+}
+.signupbody p input[type="submit"] {
+    background-color: #3498db;
+    height: 30px;
+    font-size: medium;
+    color: white;
+    cursor: pointer;
+}
+.signupbody p input[type="submit"]:hover{
+     background-color: #07f0a6;
+}
+.signupfooter {
+    color: #555;
+    text-align: center;
+
+}
+
+.c1 {
+    width: 180px;
+    height: 180px;
+    border-radius: 100px;
+    background:linear-gradient(to top right, #ffffff33, #ffffffff)
+    
+}
+.left{
+    position: absolute;
+    top: 60px;
+    left: 40px;
+
+}
+.right{
+    position: absolute;
+    bottom: 60px;
+    right: 40px;
+}
+</style>
+
+
+<body>
+    <div class="outerbox">
+        <div class="innerbox">
+            <header class="signupheader">
+                <h1>Login</h1>
+                <!-- <p>It just take 30 seconds</p> -->
+            </header>
+            <main class="signupbody">
+                <form action="#">
+                    <p>
+                        <label for="Your Email">Enter Your Email</label>
+                        <input type="text" id="Your Email" placeholder="ABC@gmail.com" required>
+            
+                    <p>
+                        <label for="Password">Enter Your Password</label>
+                        <input type="Password" id="Password" placeholder="Password" required>
+                    </p>
+                    <p>
+                        
+                        <input type="submit" id="submit" value="Login" required>
+                    </p>
+
+                    <footer class="signupfooter">Don't have an account? <a href="/singup">Signup</a></footer>
+                </form>
+
+            </main>
+        </div>
+        <div class="c1 left"></div>
+        <div class="c1 right"></div>
+    </div>
+    </div>
+    
+</body>
+</html>

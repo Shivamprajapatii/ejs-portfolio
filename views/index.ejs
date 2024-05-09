@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porfolio</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/assets/Image.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&display=swap"
+        rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <!--======================================= header Part Start ====================================================--->
+    <header>
+        <div id="main-header">
+            <div class="image-name">
+                <div class="header-image">
+                    <img src="/assets/Image.png" alt="My Image" class="hero-image">
+                </div>
+                <div class="name">
+                    <h2>@SDE Shivam Prajapati</h2>
+                    <p>Software Engineer</p>
+                    <h3>I am a <span class="typed"></span></h3>
+                </div>
+            </div>
+            <div class="navbar">
+                <ul>
+                    <li class="hideOnMobile"><a href="/home" class="home" style="color:#FFA600">Home</a></li>
+                    <li class="hideOnMobile"> <a href="/home/#skill-home">Skills</a></li>
+                    <li class="hideOnMobile"> <a href="#project-main">Projects</a></li>
+                    <li class="hideOnMobile"> <a href="#about-main">About</a></li>
+                    <li class="hideOnMobile"><a href="#contect-main">Contact</a></li>
+                    <li class="menu-button" onclick=showSidebar()><i class="fa-solid fa-bars  menu"></i></li>
+                </ul>
+                <!-- <a href="/singUp">SingUp</a>
+                <a href="/login">Login</a> -->
+            </div>
+        </div>
+
+    </header>
+    <!--============================================== header Part Start ==========================================================--->
+
+    <!--========================================== Project Section Start ======================================================== -->
+    <section id="project-main">
+        <div class="peoject-heading">
+            <h1 class="head-recent">Recent</h1>
+            <h1 class="head-project">Projects</h1>
+        </div>
+        <div id="project-home">
+            <% for(let project of projectData) { %>
+                <div class="project-main-card">
+                    <a>
+                        <img src="<%= project.image %>" alt="Man" class="card-img">
+                        <div class="description">
+                            <h3>
+                                <%= project.title %>
+                            </h3>
+                            <button><a href="/project/<%= project._id %>">Click Me!</a></button>
+                        </div>
+                    </a>
+
+                </div>
+                <% } %>
+                    <form action="/projects/new" method="GET">
+                        <!-- <button>Add New </button>        -->
+                    </form>
+        </div>
+
+    </section>
+
+    <!--========================================== Project Section End ======================================================== -->
+
+    <!--========================================== About Section Start ======================================================== -->
+
+    <section id="about-section">
+        <div class="heading">
+            <h1 class="about">About <span>Me!</span></h1>
+        </div>
+        <div id="about-main">
+            <div class="abt-home">
+                <p>Pursuing BSc <b>(Information Technology)</b> From SIES (Nerul) College Of Arts Science And Commerce
+                    affiliated Mumbai University. Batch <b>2022-2025.</b> <br> <br>
+                    I have learned Frontend Technologies (<u>HTML5, CSS3, JavaScript, and their Frameworks Bootstraps,
+                        Technology </u>) as well as Backend Technologies(<u>JSP and Databases)</u> and Creates Some
+                    Projects using these
+                    Technologies. <br> <br>
+                    Outside of the Tech World, Hobbies is Visiting new place and Shoot Vlogs.
+                <b>Living learning Something new & growing up one day at a time</b></p>
+                <div class="img-div">
+                    <img src="/assets/Image.png" alt="about image">
+                </div>
+            </div>
+            <button class="cv-btn">Download CV</button>
+
+        </div>
+
+    </section>
+
+    <!--========================================== About Section End ======================================================== -->
+
+
+    <!--========================================== Skill Section Start ======================================================== -->
+    <section class="skill" id="skill-home">
+        <div class="skill-heading">
+            <h2 class="what">What </h2>
+            <h2 class="I">I</h2>
+            <h2 class="know">Know</h2>
+        </div>
+
+        <div class="all-skill-box">
+            <div class="frontend">
+                <div class="front-skill">
+                    <h1>Frontend</h1>
+                    <div class="html">
+                        <p class="html">HTML </p><img src="/assets/html icon.png" alt="html"></img>
+                    </div>
+                    <div class="css">
+                        <p class="css">CSS </p> <img src="/assets/CSS icon.png" alt="CSS"></img>
+                    </div>
+                    <div class="telwind">
+                        <p class="telwind">Tailwind</p> <img src="/assets/tailwind-css-icon.png" alt="telwind"> </img>
+                    </div>
+
+                    <div class="javascript">
+                        <p class="javascript">Javascript</p> <img src="/assets/javascript-96 px size.png"
+                            alt="Javascript"></img>
+                    </div>
+
+                    <div class="reactjs">
+                        <p class="reactjs">React Js</p> <img src="/assets/react 80px size.png" alt="React"></img>
+                    </div>
+                </div>
+            </div>
+
+            <div class="backend">
+                <div class="back-skill">
+                    <h1>Backend</h1>
+                    <div class="NodeJs">
+                        <p class="NodeJs">Node Js</p> <img src="/assets/node-js-96.png" alt="Node Js"> </img>
+                    </div>
+                    <div class="Express">
+                        <p class="Express">ExpressJs</p> <img src="/assets/icons8-express-js-96.png"
+                            alt="Express Js"></img>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detabase">
+                <h1>Database</h1>
+                <div class="mysql">
+                    <p class="html">MySql</p> <img src="/assets/icons8-mysql-96.png" alt="MYsql Image"> </img>
+                </div>
+                <div class="MongoDB">
+                    <p class="html">MongoDB </p> <img src="/assets/icons8-mongodb-96.png" alt="Mongo DB"> </img>
+                </div>
+            </div>
+            <div class="Deveops">
+                <h1>Deveops</h1>
+                <div class="devop-skill">
+                    <div class="git">
+                        <p class="html">Git</p> <img src="/assets/icons8-git-96.png" alt="GIT"> </img>
+                    </div>
+                    <div class="aws">
+                        <p class="html">AWS</p> <img src="/assets/icons8-amazon-web-services-96.png" alt="AWS"> </img>
+                    </div>
+                    <div class="github">
+                        <p class="html">GITHUB</p> <img src="/assets/icons8-git-96.png" alt=""> </img>
+                    </div>
+                </div>
+            </div>
+            <div class="pro-language">
+                <h1>Language</h1>
+                <div class="java">
+                    <p class="html">Java</p> <img src="/assets/icons8-java-96.png" alt="Java"> </img>
+                </div>
+                <div class="DSA">
+                    <p class="html">DSA</p> <img src="/assets/icons8-java-96.png" alt="Java"> </img>
+                </div>
+                <div class="Cplus">
+                    <p class="C++" class="html">C++</p> <img src="/assets/icons8-c-96.png" alt="C++"> </img>
+                </div>
+                <div class="python">
+                    <p class="python">Pyhton</p> <img src="/assets/python-96.png" alt="Python"></img>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--========================================== Skill Section End ======================================================== -->
+    <!--========================================== Contect Section End ======================================================== -->
+    <section id="contact-main-box">
+        <div id="contect-main">
+            <div class="contect-heading">
+                <h1>Grt In Touch</h1>
+                <h1 class="me">With Me!</h1>
+            </div>
+            <div class="contect-form">
+                <div class="msg-img">
+                    <img src="/assets/message_1040217.png" alt="">
+                </div>
+                <div class="msg-form">
+                    <form action="">
+                        <input type="text"  id="name" class="name" placeholder="Enter Your Name" required>
+                        <br>
+                        <input type="email"  id="email" class="email" placeholder="Enter Your Email" required>
+                        <br>
+                        <input type="mobile"  id="number" class="number"
+                            placeholder="Enter Your Mobile Number" required>
+                        <br>
+                        <input  id="message" class="message"
+                            placeholder="Write Your Message Here" required></input>
+                        <br><br>
+                        <button class="send-btn">Send</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--========================================== Contect Section End ======================================================== -->
+    <!--========================================== footer Section Start ======================================================== -->
+    <footer id="main-footer">
+        <div class="foot-box">
+            <div class="join-us">
+                <h4>JOIN US ON</h4>
+                <h6><span class="typed" style="color: #FFA600;"></span></h6>
+            </div>
+            <div class="social-icon">
+                <a href=""><i class="fa-brands fa-github" style="--i: 7"></i></a>
+                <a href=""><i class="fa-brands fa-linkedin" style="--i: 8"></i></a>
+                <a href=""><i class="fa-brands fa-instagram" style="--i: 9"></i></a>
+                <a href=""><i class="fa-brands fa-twitter" style="--i: 10"></i></a>
+                <a href=""><i class="fa-brands fa-facebook" style="--i: 11"></i></a>
+            </div>
+            <div class="footer-title">
+                <p>Copyright @2024 HandCreated By Me ❤️</p>
+            </div>
+        </div>
+    </footer>
+    <!--========================================== Footer Section End ======================================================== -->
+
+
+    <!-- ---------------------------------- javaScript Part ----------------------------------- -->
+
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="/js/script.js" defer></script>
+
+    <!-- ---------------------------------- javaScript Part ----------------------------------- -->
+</body>
+
+</html>
