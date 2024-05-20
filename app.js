@@ -76,7 +76,7 @@ app.get("/login",(req,res) => {
 
 app.get("/home",async(req,res) => {
    let projectData = await Project.find({});
-    res.render("index.ejs",{projectData}); 
+    res.render("index",{projectData}); 
 });
 
 // Perticular Project Ka Full Information
