@@ -7,8 +7,6 @@
     font-family: 'poppins', sans-serif;
     scroll-behavior: smooth;
     outline: none;
-
-
 }
 
 body {
@@ -149,19 +147,22 @@ h3 span {
     opacity: 1;
 }
 
-
-
-@media(max-width: 900px) {
-    .navbar .hideOnMobile {
+.navbar .menu-button {
+    margin-top: 0.8rem;
+    margin-left: 2rem;
+    display: none;
+}
+@media screen and (max-width:771px) {
+    .navbar {
         display: none;
     }
-
-    .menu-button {
-        margin-top: 0.8rem;
-        margin-left: 2rem;
+}
+@media screen and (max-width:771px) {
+    .navbar .menu-button {
         display: block;
     }
 }
+
 
 
 /* ------------------------------------------------------------------- */
@@ -191,172 +192,215 @@ h3 span {
 
 
 /*================================= Preject Section  Start ======================= */
-
-#project-main {
-    padding-top: 4rem;
-    align-items: center;
-    width: 100%;
-
-}
-
-@media screen and (max-width: 450px) {
-    #project-main {
-        margin-left: 7rem;
-    }
-}
-
-#project-home {
-    background-color: white;
-    color: black;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding-top: 1rem;
-}
-
-.peoject-heading {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #FFA600;
-}
-
-.head-project {
-    color: #1c1b23;
-    margin-left: 0.6rem;
+.projects-section {
+    padding: 50px 0;
 }
 
 
-.project-main-card {
-    height: 16rem;
-    width: 16rem;
-    display: inline-block;
-    margin: 10px;
-    border: 2px solid black;
-    border-radius: 10px;
-    box-shadow: 0 2px 0.6rem black;
-    transition: 1s;
-}
-
-
-
-.description {
-    padding-top: 0.4rem;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
     text-align: center;
 }
 
-.card-img {
-    border: 2px solid rgb(191, 14, 235);
-    margin-top: 0.9rem;
-    margin-left: 3.5rem;
-    height: 60%;
-    width: 60%;
-    border-radius: 50%;
+.projects-section h2 {
+    font-size: 2.5rem;
+    color: #fbc02d;
+    margin-bottom: 50px;
+    text-transform: uppercase;
 }
 
-@media screen and (max-width: 250px) {
-    .card-img {
-        margin: auto;
+.projects-section h2 span {
+    color: #333;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+}
+
+.project-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+.project-image {
+    background-size: cover; /* Ensures the image covers the container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    width: 100%;
+    height: 200px; /* Example height, adjust as needed */
+    border-radius: 15px 15px 0 0; /* Matches the border-radius of the container */
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-bottom: 2px solid #fbc02d;
+    border-radius: 15px 15px 0 0;
+    transition: transform 0.3s ease;
+    opacity: 0; /* Hide the img tag visually but keep it for SEO/alt text */
+    position: absolute;
+}
+
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 15px 0;
+}
+
+.btn-view {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    background-color: #fbc02d;
+    color: #fff;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.btn-view:hover {
+    background-color: #f57c00;
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
     }
 }
 
-.line-div {
-    height: 0.1px;
-    border: 0.1px solid black;
-}
 
 /*================================= Preject Section End ======================= */
 
 /*================================= About Section End ======================= */
-#about-section {
-    margin-top: 7rem;
+
+
+.about-section {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 50px 0;
 }
 
-#about-section .heading {
-    display: flex;
+.about-section h2 {
+    text-align: center;
     align-items: center;
-    justify-content: center;
 }
 
-#about-section span {
-    margin-left: 0.6rem;
-    color: #FFA600;
-}
-
-#about-main {
-    width: 85%;
+.container {
+    max-width: 1200px;
     margin: auto;
-    border: 3px solid #FFA600;
-    border-radius: 2rem;
+    padding: 20px;
 }
 
-#about-main .abt-home {
+.about-content {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
-    align-items: center;
-
+    padding: 30px;
+    border: 2px solid black;
+    border-radius: 1rem;
 }
 
-.abt-home p {
-    order: 1;
-    width: 70%;
-    padding-top: 1rem;
-    padding-left: 1rem;
+.profile-image {
+    flex: 1;
+    text-align: center;
 }
 
-.abt-home img {
-    order: 2;
-    margin-left: 2rem;
+.profile-image img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 5px solid #fbc02d;
 }
 
+.about-text {
+    flex: 2;
+    padding: 20px;
+}
 
-@media screen and (max-width: 700px) {
-    .abt-home {
+.about-text .btn-download {
+    color: black;
+}
+.about-text h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-text h2 span {
+    color: #fbc02d;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.about-text p strong {
+    font-weight: bold;
+}
+
+.about-text a {
+    color: #fbc02d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-download {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #fbc02d;
+    color: #fff;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.btn-download:hover {
+    background-color: #f57c00;
+}
+
+@media (max-width: 768px) {
+    .about-content {
         flex-direction: column;
     }
 
-    .abt-home p {
-        order: 2;
-        flex-direction: column;
-    }
-}
-
-@media screen and (max-width: 450px) {
-    #about-main {
-        margin-left: 7rem;
+    .profile-image,
+    .about-text {
+        flex: unset;
+        text-align: center;
     }
 
-    #about-section .heading {
-        margin-left: 10rem;
-        background-color: #00ffff;
-        width: 10rem;
+    .about-text {
+        padding: 0;
     }
-}
-
-.cv-btn {
-    margin-left: 5rem;
-    margin-top: 1.2rem;
-    margin-bottom: 1.2rem;
-    background-color: #ffa600;
-    height: 2.4rem;
-    width: 12rem;
-    border-radius: 0.9rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-    box-shadow: 0 0 0.9rem #FFA600;
-    animation: slideUp 1s ease forwards;
-    animation-delay: 1ms;
-}
-
-.cv-btn:hover {
-    box-shadow: none;
-    opacity: 0.9;
-    background-color: #e4e4e7;
 }
 
 /*================================= About Section End ======================= */
@@ -365,13 +409,13 @@ h3 span {
 /*================================= Skill Section Start ======================= */
 
 
-#skill-home {
+/* #skill-home {
     margin-top: 5rem;
     height: 77%;
     color: white;
     width: 95%;
     margin-left: 1.9rem;
-}
+} */
 
 #skill-home .skill-heading {
     margin-top: 1rem;
@@ -394,569 +438,56 @@ h3 span {
     margin-left: 0.4rem;
 }
 
-.all-skill-box {
-    margin-top: 3rem;
+
+.skill-container {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
+    gap: 20px;
     justify-content: center;
+}
+
+.skill-card {
+    background-color: white;
+    border: 2px solid #ddd;
     border-radius: 10px;
-}
-
-.frontend {
-    height: 20rem;
-    width: 13rem;
-    padding-left: 1rem;
-    color: #FFA600;
-    border-radius: 0.7rem;
-    border: 1.7px solid black;
-}
-
-.front-skill .html,
-.frontend .front-skill .css,
-.frontend .front-skill .telwind,
-.frontend .front-skill .javascript,
-.frontend .front-skill .reactjs,
-.frontend .front-skill .nextjs {
-    display: flex;
-    color: #1c1b23;
-}
-
-.front-skill h1 {
-    color: #000000;
+    padding: 20px;
+    width: 200px;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.front-skill .html {
-    height: 3rem;
-    width: 11.5rem;
-    margin-right: 3rem;
-    margin-top: 0.2rem;
-    display: flex;
-    justify-content: space-around;
-
+.skill-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
 }
 
-.front-skill .html p {
-    width: 5rem;
-    background-color: #e4e4e7;
-    color: #14131a;
-    border: 2px solid #FFA600;
-    padding-top: 0.6rem;
-    font-weight: 400;
-    border-radius: 0.7rem;
+.skill-card ul {
+    list-style: none;
+    color: black;
 }
 
-.front-skill .html img {
-    height: 3rem;
-    padding-left: 1.5rem;
-
-}
-
-.front-skill .css {
-    height: 3rem;
-    width: 11.5rem;
-    margin-right: 3rem;
-    margin-top: 0.2rem;
-    display: flex;
-    justify-content: space-evenly;
-
-}
-
-.frontend .css p {
-    background-color: #e4e4e7;
-    color: #14131a;
-    border: 2px solid rgb(9, 97, 221);
-    padding-top: 0.6rem;
-    font-weight: 400;
-    border-radius: 0.7rem;
-}
-
-.frontend .css img {
-    height: 3rem;
-    padding-left: 2rem;
-}
-
-.front-skill .telwind {
-    height: 3rem;
-    width: 11.5rem;
-    margin-right: 3rem;
-    margin-top: 0.2rem;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.front-skill .telwind p {
-    background-color: #e4e4e7;
-    color: #14131a;
-    border: 2px solid #099ddd;
-    border-radius: 0.7rem;
-    padding-top: 0.6rem;
-    font-weight: 400;
-}
-
-.front-skill .telwind img {
-    height: 1.9rem;
-    padding-left: 0.1rem;
-    margin-top: 0.7rem;
-    border-radius: 50%;
-}
-
-.front-skill .javascript {
-    height: 3rem;
-    width: 11.5rem;
-    margin-right: 2rem;
-    margin-top: 0.2rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.front-skill .javascript p {
-    background-color: #e4e4e7;
-    color: #14131a;
-    border: 2px solid #efd10b;
-    border-radius: 0.7rem;
-    padding-top: 0.1rem;
-    padding-left: 0.2rem;
-    padding-right: 0.6rem;
-    font-weight: 400;
-}
-
-.front-skill .javascript img {
-    height: 2.7rem;
-    margin-right: 0.2rem;
-    margin-top: 0.7rem;
-}
-
-.front-skill .reactjs {
-    height: 3rem;
-    width: 12.7rem;
-    margin-right: 4rem;
-    margin-top: 0.2rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.front-skill .reactjs p {
-    background-color: #e4e4e7;
-    color: #14131a;
-    border: 2px solid rgb(9, 97, 221);
-    border-radius: 0.7rem;
-    padding-top: 0.2rem;
-    padding-left: 0.2rem;
-    font-weight: 400;
-}
-
-.front-skill .reactjs img {
-    height: 2rem;
-    width: 5rem;
-    margin-right: 1.6rem;
-    margin-top: 0.7rem;
-}
-
-/* ========================== Frontend End =============================*/
-
-/* --------------------- Backend Start ------------------------------------- */
-.backend {
-    height: 20rem;
-    width: 13rem;
-    margin-left: 0.5rem;
-    padding-left: 1rem;
-    color: #1c1b23;
-    border: 1.7px solid black;
-    border-radius: 0.7rem;
-}
-
-.back-skill h1 {
-    color: #000000;
-    text-align: center;
-}
-
-.backend .NodeJs {
-    height: 3rem;
-    width: 12.5rem;
-    margin-right: 3rem;
-    margin-top: 0.2rem;
-    display: flex;
-    justify-content: space-around;
-}
-
-.backend .NodeJs p {
-    background-color: #e4e4e7;
-    color: #14131a;
-    border: 2px solid rgb(9, 97, 221);
-    padding-top: 0.6rem;
-    font-weight: 400;
-    border-radius: 0.7rem;
-}
-
-.backend .NodeJs img {
-    height: 2.5rem;
-    padding-left: 1rem;
-    margin-right: 1rem;
-
-}
-
-.backend .Express {
-    height: 3rem;
-    width: 11.5rem;
-    margin-right: 4rem;
-    margin-top: 0.2rem;
-    display: flex;
-    justify-content: space-around;
-}
-
-.backend .Express p {
-    background-color: #e4e4e7;
-    color: #14131a;
-    border: 2px solid rgb(9, 97, 221);
-    border-radius: 0.7rem;
-    padding-top: 0.6rem;
-    padding-left: 0.2rem;
-    font-weight: 400;
-}
-
-
-.backend .Express img {
-    height: 2rem;
-    margin-top: 0.7rem;
-}
-
-/*  =============== backend End ==================== */
-
-/* ----------------------------- database Start -------------------------- */
-
-.detabase {
-    height: 20rem;
-    width: 13rem;
-    margin-left: 0.5rem;
-    padding-left: 1rem;
-    color: #1c1b23;
-    border: 1.7px solid black;
-    border-radius: 0.7rem;
-}
-
-.detabase h1 {
-    text-align: center;
-    color: #000000;
-}
-
-.detabase .mysql {
-    height: 3rem;
-    width: 11.5rem;
-    margin-right: 2rem;
-    margin-top: 0.2rem;
+.skill-card li {
+    margin: 10px 0;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
-.detabase .mysql p {
-    height: 3rem;
-    background-color: #e4e4e7;
-    color: #14131a;
-    border: 2px solid rgb(9, 97, 221);
-    border-radius: 0.7rem;
-    padding-top: 0.5rem;
-    padding-left: 0.3rem;
-    padding-right: 0.6rem;
-    font-weight: 400;
+.skill-card img {
+    width: 20px;
+    height: 20px;
 }
 
-.detabase .mysql img {
-    margin-left: 4rem;
-    height: 3rem;
-
-}
-
-.detabase .MongoDB {
-    height: 3rem;
-    width: 11.5rem;
-    margin-right: 2rem;
-    margin-top: 0.2rem;
-    display: flex;
-    align-items: center;
-}
-
-.detabase .MongoDB p {
-    height: 3rem;
-    background-color: #e4e4e7;
-    color: #14131a;
-    border: 2px solid rgb(9, 97, 221);
-    border-radius: 0.7rem;
-    padding-top: 0.5rem;
-    padding-left: 0.3rem;
-    padding-right: 0.6rem;
-    font-weight: 400;
-}
-
-.detabase .MongoDB img {
-    margin-left: 2.5rem;
-    height: 3rem;
-}
-
-/*=================================== Database End ======================== */
-
-/*=================================== DevOps Start ======================== */
-
-.Deveops {
-    height: 20rem;
-    width: 13rem;
-    margin-left: 0.5rem;
-    padding-left: 1rem;
-    color: #1c1b23;
-    border: 1.7px solid black;
-    border-radius: 0.7rem;
-}
-
-.Deveops h1 {
-    text-align: center;
-    color: #000000;
-}
-
-.Deveops .git {
-    height: 3rem;
-    width: 11.5rem;
-    margin-right: 2rem;
-    margin-top: 0.2rem;
-    display: flex;
-    align-items: center;
-}
-
-.Deveops .git p {
-    height: 3rem;
-    background-color: #e4e4e7;
-    color: #14131a;
-    border: 2px solid rgb(9, 97, 221);
-    border-radius: 0.7rem;
-    padding-top: 0.5rem;
-    padding-left: 0.3rem;
-    padding-right: 0.6rem;
-    font-weight: 400;
-}
-
-.Deveops .git img {
-    margin-left: 5.5rem;
-    height: 3rem;
-}
-
-.Deveops .aws {
-    height: 3rem;
-    width: 11.5rem;
-    margin-right: 2rem;
-    margin-top: 0.2rem;
-    display: flex;
-    align-items: center;
-}
-
-.Deveops .aws p {
-    height: 3rem;
-    background-color: #e4e4e7;
-    color: #14131a;
-    border: 2px solid rgb(9, 97, 221);
-    border-radius: 0.7rem;
-    padding-top: 0.5rem;
-    padding-left: 0.3rem;
-    padding-right: 0.6rem;
-    font-weight: 400;
-}
-
-.Deveops .aws img {
-    margin-left: 4.7rem;
-    height: 3rem;
-}
-
-.Deveops .github {
-    height: 3rem;
-    width: 11.5rem;
-    margin-right: 2rem;
-    margin-top: 0.2rem;
-    display: flex;
-    align-items: center;
-}
-
-.Deveops .github p {
-    height: 3rem;
-    background-color: #e4e4e7;
-    color: #14131a;
-    border: 2px solid rgb(9, 97, 221);
-    border-radius: 0.7rem;
-    padding-top: 0.5rem;
-    padding-left: 0.3rem;
-    padding-right: 0.6rem;
-    font-weight: 400;
-}
-
-
-.Deveops .github img {
-    /* height: 3rem;
-    padding-left: 0.1rem;
-    margin-top: 0.7rem; */
-    margin-left: 3.2rem;
-    height: 3rem;
-}
-
-/*=================================== DevOps End ======================== */
-
-
-/*=================================== Programming Start ======================== */
-.pro-language {
-    height: 20rem;
-    width: 13rem;
-    margin-left: 0.5rem;
-    padding-left: 1rem;
-    border: 1.7px solid black;
-    border-radius: 0.7rem;
-}
-
-.pro-language h1 {
-    text-align: center;
-    color: #000000;
-}
-
-.pro-language .java {
-    height: 3rem;
-    width: 11.5rem;
-    margin-right: 2rem;
-    margin-top: 0.2rem;
-    display: flex;
-    align-items: center;
-}
-
-.pro-language .java p {
-    height: 3rem;
-    background-color: #e4e4e7;
-    color: #14131a;
-    border: 2px solid gold;
-    border-radius: 0.7rem;
-    padding-top: 0.5rem;
-    padding-left: 0.3rem;
-    padding-right: 0.6rem;
-    font-weight: 400;
-    border: 2px solid rgb(9, 97, 221);
-}
-
-.pro-language .java img {
-    margin-left: 4.6rem;
-    height: 3rem;
-}
-
-.pro-language .DSA {
-    height: 3rem;
-    width: 11.5rem;
-    margin-right: 2rem;
-    margin-top: 0.2rem;
-    display: flex;
-    align-items: center;
-}
-
-.pro-language .DSA p {
-    height: 3rem;
-    background-color: #e4e4e7;
-    color: #14131a;
-    border: 2px solid rgb(9, 97, 221);
-    border-radius: 0.7rem;
-    padding-top: 0.5rem;
-    padding-left: 0.3rem;
-    padding-right: 0.6rem;
-    font-weight: 400;
-}
-
-.pro-language .DSA img {
-    margin-left: 4.7rem;
-    height: 3rem;
-}
-
-.pro-language .Cplus {
-    height: 3rem;
-    width: 11.5rem;
-    margin-right: 2rem;
-    margin-top: 0.2rem;
-    display: flex;
-    align-items: center;
-}
-
-.pro-language .Cplus p {
-    height: 3rem;
-    background-color: #e4e4e7;
-    color: #14131a;
-    border: 2px solid rgb(9, 97, 221);
-    border-radius: 0.7rem;
-    padding-top: 0.5rem;
-    padding-left: 0.3rem;
-    padding-right: 0.6rem;
-    font-weight: 400;
-}
-
-.pro-language .Cplus img {
-    margin-left: 4.9rem;
-    height: 3rem;
-}
-
-.pro-language .python {
-    height: 3rem;
-    width: 11.5rem;
-    margin-right: 2rem;
-    margin-top: 0.2rem;
-    display: flex;
-    align-items: center;
-}
-
-.pro-language .python p {
-    height: 3rem;
-    background-color: #e4e4e7;
-    color: #14131a;
-    border: 2px solid rgb(9, 97, 221);
-    border-radius: 0.7rem;
-    padding-top: 0.5rem;
-    padding-left: 0.3rem;
-    padding-right: 0.6rem;
-    font-weight: 400;
-}
-
-.pro-language .python img {
-    height: 3rem;
-    margin-left: 1.9rem;
-    height: 3rem;
-}
-
-@media screen and (max-width: 1130px) {
-
-    .pro-language,
-    .Deveops,
-    .detabase,
-    .frontend,
-    .backend {
-        margin-top: 1rem;
-       
+@media (max-width: 768px) {
+    .skill-container {
+        flex-direction: column;
         align-items: center;
-        
     }
 
-}
-
-@media screen and (max-width: 400px) {
-    .skill-heading {
-      padding-left: 8rem;
-    }
-    .all-skill-box {
-        margin-left: 8rem;
+    .skill-card {
+        width: 90%;
     }
 }
-
-
-/*=================================== Programming End ======================== */
-
-#skill-home h2 {
-    color: #e4e4e7;
-}
-
-#skill-home .line-div {
-    margin-top: 4rem;
-}
-
 
 /*================================= Skill Section End ======================= */
 
@@ -1115,7 +646,6 @@ h3 span {
 /* ========================================== footer Section Start ======================================================== */
 #main-footer {
     margin-top: 5rem;
-  
 }
 
 
@@ -1127,12 +657,16 @@ h3 span {
     flex-direction: column; 
     margin-left: 5rem;
 }
-.foot-box .para {
-    margin-top: 2rem;
+
+.join-us {
+    height: 20px;
+    width: 200px;
 }
+
 
 .social-icon {
     display: flex;
+    margin-top: 10px;
 }
 
 .foot-box .social-icon i {

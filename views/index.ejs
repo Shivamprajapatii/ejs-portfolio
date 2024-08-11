@@ -26,7 +26,7 @@
                     <img src="/assets/Image.png" alt="My Image" class="hero-image">
                 </div>
                 <div class="name">
-                    <h2>@SDE Shivam Prajapati</h2>
+                    <h2>@Shivam Prajapati</h2>
                     <p>Software Engineer</p>
                     <h3>I am a <span class="typed"></span></h3>
                 </div>
@@ -49,58 +49,42 @@
     <!--============================================== header Part Start ==========================================================--->
 
     <!--========================================== Project Section Start ======================================================== -->
-    <section id="project-main">
-        <div class="peoject-heading">
-            <h1 class="head-recent">Recent</h1>
-            <h1 class="head-project">Projects</h1>
-        </div>
-        <div id="project-home">
-            <% for(let project of projectData) { %>
-                <div class="project-main-card">
-                    <a>
-                        <img src="<%= project.image %>" alt="Man" class="card-img">
-                        <div class="description">
-                            <h3>
-                                <%= project.title %>
-                            </h3>
-                            <button><a href="/project/<%= project._id %>">Click Me!</a></button>
-                        </div>
-                    </a>
+    <section class="projects-section">
+        <div class="container">
+            <h2>Recent <span>Projects</span></h2>
+            <div class="projects-grid">
+                <% for(let project of projectData) { %>
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('<%= project.image %>');">
+                        <img src="<%= project.image %>" alt="Project">
+                    </div>
+                    <h3><%= project.title %></h3>
+                    <a href="/project/<%= project._id %>" class="btn-view">Click Me!</a>
                 </div>
                 <% } %>
-                    <form action="/projects/new" method="GET">
-                        <!-- <button>Add New </button>        -->
-                    </form>
+            </div>
         </div>
-
     </section>
 
     <!--========================================== Project Section End ======================================================== -->
 
     <!--========================================== About Section Start ======================================================== -->
 
-    <section id="about-section">
-        <div class="heading">
-            <h1 class="about">About <span>Me!</span></h1>
-        </div>
-        <div id="about-main">
-            <div class="abt-home">
-                <p>Pursuing BSc <b>(Information Technology)</b> From SIES (Nerul) College Of Arts Science And Commerce
-                    affiliated Mumbai University. Batch <b>2022-2025.</b> <br> <br>
-                    I have learned Frontend Technologies (<u>HTML5, CSS3, JavaScript, and their Frameworks Bootstraps,
-                        Technology </u>) as well as Backend Technologies(<u>JSP and Databases)</u> and Creates Some
-                    Projects using these
-                    Technologies. <br> <br>
-                    Outside of the Tech World, Hobbies is Visiting new place and Shoot Vlogs.
-                <b>Living learning Something new & growing up one day at a time</b></p>
-                <div class="img-div">
-                    <img src="/assets/Image.png" alt="about image">
+    <section class="about-section">
+        <h2>About <span>Me!</span></h2>
+        <div class="container">
+            <div class="about-content">
+                <div class="profile-image">
+                    <img src="/assets/Image.png" alt="Profile Picture">
+                </div>
+                <div class="about-text">
+                    <p>Pursuing BSc (<strong>Information Technology</strong>) From SIES (Nerul) College Of Arts Science And Commerce affiliated with Mumbai University. Batch <strong>2022-2025</strong>.</p>
+                    <p>I have learned Frontend Technologies (<a href="#">HTML5</a>, <a href="#">CSS3</a>, <a href="#">JavaScript</a>, and their Frameworks Bootstraps Technology) as well as Backend Technologies (<a href="#">JSP</a> and <a href="#">Databases</a>) and Created Some Projects using these Technologies.</p>
+                    <p>Outside of the Tech World, Hobbies include Visiting new places and Shooting Vlogs. <strong>Living learning Something new & growing up one day at a time</strong>.</p>
+                    <a href="#" class="btn-download">Download CV</a>
                 </div>
             </div>
-            <button class="cv-btn">Download CV</button>
-
         </div>
-
     </section>
 
     <!--========================================== About Section End ======================================================== -->
@@ -113,83 +97,47 @@
             <h2 class="I">I</h2>
             <h2 class="know">Know</h2>
         </div>
-
-        <div class="all-skill-box">
-            <div class="frontend">
-                <div class="front-skill">
-                    <h1>Frontend</h1>
-                    <div class="html">
-                        <p class="html">HTML </p><img src="/assets/html icon.png" alt="html"></img>
-                    </div>
-                    <div class="css">
-                        <p class="css">CSS </p> <img src="/assets/CSS icon.png" alt="CSS"></img>
-                    </div>
-                    <div class="telwind">
-                        <p class="telwind">Tailwind</p> <img src="/assets/tailwind-css-icon.png" alt="telwind"> </img>
-                    </div>
-
-                    <div class="javascript">
-                        <p class="javascript">Javascript</p> <img src="/assets/javascript-96 px size.png"
-                            alt="Javascript"></img>
-                    </div>
-
-                    <div class="reactjs">
-                        <p class="reactjs">React Js</p> <img src="/assets/react 80px size.png" alt="React"></img>
-                    </div>
-                </div>
+        <div class="skill-container">
+            <div class="skill-card">
+                <h2>Frontend</h2>
+                <ul>
+                    <li>HTML <img src="/assets/html icon.png" alt="HTML"></li>
+                    <li>CSS <img src="/assets/CSS icon.png" alt="CSS"></li>
+                    <li>Tailwind <img src="/assets/tailwind-css-icon.png" alt="Tailwind"></li>
+                    <li>Javascript <img src="/assets/javascript-96 px size.png" alt="Javascript"></li>
+                    <li>React Js <img src="/assets/react 80px size.png" alt="React Js"></li>
+                </ul>
             </div>
-
-            <div class="backend">
-                <div class="back-skill">
-                    <h1>Backend</h1>
-                    <div class="NodeJs">
-                        <p class="NodeJs">Node Js</p> <img src="/assets/node-js-96.png" alt="Node Js"> </img>
-                    </div>
-                    <div class="Express">
-                        <p class="Express">ExpressJs</p> <img src="/assets/icons8-express-js-96.png"
-                            alt="Express Js"></img>
-                    </div>
-                </div>
+            <div class="skill-card">
+                <h2>Backend</h2>
+                <ul>
+                    <li>Node Js <img src="/assets/node-js-96.png" alt="Node Js"></li>
+                    <li>ExpressJs <img src="/assets/icons8-express-js-96.png" alt="ExpressJs"></li>
+                </ul>
             </div>
-
-            <div class="detabase">
-                <h1>Database</h1>
-                <div class="mysql">
-                    <p class="html">MySql</p> <img src="/assets/icons8-mysql-96.png" alt="MYsql Image"> </img>
-                </div>
-                <div class="MongoDB">
-                    <p class="html">MongoDB </p> <img src="/assets/icons8-mongodb-96.png" alt="Mongo DB"> </img>
-                </div>
+            <div class="skill-card">
+                <h2>Database</h2>
+                <ul>
+                    <li>MySql <img src="/assets/icons8-mysql-96.png" alt="MySql"></li>
+                    <li>MongoDB <img src="/assets/icons8-mongodb-96.png" alt="MongoDB"></li>
+                </ul>
             </div>
-            <div class="Deveops">
-                <h1>Deveops</h1>
-                <div class="devop-skill">
-                    <div class="git">
-                        <p class="html">Git</p> <img src="/assets/icons8-git-96.png" alt="GIT"> </img>
-                    </div>
-                    <div class="aws">
-                        <p class="html">AWS</p> <img src="/assets/icons8-amazon-web-services-96.png" alt="AWS"> </img>
-                    </div>
-                    <div class="github">
-                        <p class="html">GITHUB</p> <img src="/assets/icons8-git-96.png" alt=""> </img>
-                    </div>
-                </div>
+            <div class="skill-card">
+                <h2>DevOps</h2>
+                <ul>
+                    <li>Git <img src="/assets/icons8-git-96.png" alt="Git"></li>
+                    <li>AWS <img src="/assets/icons8-amazon-web-services-96.png" alt="AWS"></li>
+                    <li>GITHUB <img src="github-icon.png" alt="GITHUB"></li>
+                </ul>
             </div>
-            <div class="pro-language">
-                <h1>Language</h1>
-                <div class="java">
-                    <p class="html">Java</p> <img src="/assets/icons8-java-96.png" alt="Java"> </img>
-                </div>
-                <div class="DSA">
-                    <p class="html">DSA</p> <img src="/assets/icons8-java-96.png" alt="Java"> </img>
-                </div>
-                <div class="Cplus">
-                    <p class="C++" class="html">C++</p> <img src="/assets/icons8-c-96.png" alt="C++"> </img>
-                </div>
-                <div class="python">
-                    <p class="python">Pyhton</p> <img src="/assets/python-96.png" alt="Python"></img>
-                </div>
-
+            <div class="skill-card">
+                <h2>Language</h2>
+                <ul>
+                    <li>Java <img src="/assets/icons8-java-96.png" alt="Java"></li>
+                    <li>DSA <img src="/assets/icons8-java-96.png" alt="DSA"></li>
+                    <li>C++ <img src="/assets/cpp.png" alt="C++"></li>
+                    <li>Python <img src="/assets/python-96.png" alt="Python"></li>
+                </ul>
             </div>
         </div>
     </section>
@@ -249,7 +197,7 @@
 
     <!-- ---------------------------------- javaScript Part ----------------------------------- -->
 
-    <script>
+    <!-- <script>
         function showSidebar() {
             const sidebar = document.querySelector('.sidebar')
             sidebar.style.display = 'flex'
@@ -258,7 +206,7 @@
             const sidebar = document.querySelector('.sidebar')
             sidebar.style.display = 'none'
         }
-    </script>
+    </script> -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="/js/script.js" defer></script>
 
