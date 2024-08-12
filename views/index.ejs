@@ -19,38 +19,41 @@
 
 <body>
     <!--======================================= header Part Start ====================================================--->
-    <header>
-        <div id="main-header">
-            <div class="image-name">
-                <div class="header-image">
-                    <img src="/assets/Image.png" alt="My Image" class="hero-image">
-                </div>
-                <div class="name">
-                    <h2>@Shivam Prajapati</h2>
-                    <p>Software Engineer</p>
-                    <h3>I am a <span class="typed"></span></h3>
-                </div>
-            </div>
-            <div class="navbar">
-                <ul>
-                    <li class="hideOnMobile"><a href="/home" class="home" style="color:#FFA600">Home</a></li>
-                    <li class="hideOnMobile"> <a href="/home/#skill-home">Skills</a></li>
-                    <li class="hideOnMobile"> <a href="#project-main">Projects</a></li>
-                    <li class="hideOnMobile"> <a href="#about-main">About</a></li>
-                    <li class="hideOnMobile"><a href="#contect-main">Contact</a></li>
-                    <li class="menu-button" onclick=showSidebar()><i class="fa-solid fa-bars  menu"></i></li>
-                </ul>
-                <!-- <a href="/singUp">SingUp</a>
-                <a href="/login">Login</a> -->
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/assets/Image.png" alt="Logo">
+            <div class="nav-text">
+                <h1>@SDE Shivam Prajapati</h1>
+                <p>Software Engineer</p>
+                <p class="change-text">I am a <span class="highlight typed"></span></p>
             </div>
         </div>
-
-    </header>
+        <div class="menu" id="menu">
+            <a href="/home" class="active">Home</a>
+            <a href="/home/#skills">Skills</a>
+            <a href="/home/#projects">Projects</a>
+            <a href="/home/#about">About</a>
+            <a href="/home/#contact">Contact</a>
+            <div class="theme-toggle" onclick="toggleTheme()">
+                <i class="fa-solid fa-moon" alt="Toggle Dark Mode" id="theme-icon"></i>
+            </div>
+            <!-- <a href="/singUp">SingUp</a>
+            <a href="/login">Login</a> -->
+        </div>
+        <div class="controls">
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </nav>
     <!--============================================== header Part Start ==========================================================--->
 
     <!--========================================== Project Section Start ======================================================== -->
-    <section class="projects-section">
-        <div class="container">
+    <section class="projects-section" id="projects">
+        <div class="project-container">
             <h2>Recent <span>Projects</span></h2>
             <div class="projects-grid">
                 <% for(let project of projectData) { %>
@@ -62,6 +65,10 @@
                     <a href="/project/<%= project._id %>" class="btn-view">Click Me!</a>
                 </div>
                 <% } %>
+
+                <!-- <form action="/Projects/new" method="GET">
+                    <button>Add New Project</button>
+                </form> -->
             </div>
         </div>
     </section>
@@ -70,9 +77,9 @@
 
     <!--========================================== About Section Start ======================================================== -->
 
-    <section class="about-section">
+    <section class="about-section" id="about">
         <h2>About <span>Me!</span></h2>
-        <div class="container">
+        <div class="about-container">
             <div class="about-content">
                 <div class="profile-image">
                     <img src="/assets/Image.png" alt="Profile Picture">
@@ -91,12 +98,8 @@
 
 
     <!--========================================== Skill Section Start ======================================================== -->
-    <section class="skill" id="skill-home">
-        <div class="skill-heading">
-            <h2 class="what">What </h2>
-            <h2 class="I">I</h2>
-            <h2 class="know">Know</h2>
-        </div>
+    <section class="skill-section" id="skills">
+        <h2>What <span>I</span> <span>Know</span></h2>
         <div class="skill-container">
             <div class="skill-card">
                 <h2>Frontend</h2>
@@ -144,52 +147,41 @@
     <!--========================================== Skill Section End ======================================================== -->
     <!--========================================== Contect Section End ======================================================== -->
     <section id="contact-main-box">
-        <div id="contect-main">
-            <div class="contect-heading">
-                <h1>Grt In Touch</h1>
-                <h1 class="me">With Me!</h1>
-            </div>
-            <div class="contect-form">
-                <div class="msg-img">
-                    <img src="/assets/message_1040217.png" alt="">
+        <div class="contact-form-container">
+            <form id="contactForm" class="contact-form">
+                <h2>Contact Us</h2>
+                <p>We will get back to you asap!</p>
+                <div class="input-group">
+                    <input type="text" name="firstName" placeholder="First Name" required>
+                    <input type="text" name="lastName" placeholder="Last Name" required>
                 </div>
-                <div class="msg-form">
-                    <form action="">
-                        <input type="text"  id="name" class="name" placeholder="Enter Your Name" required>
-                        <br>
-                        <input type="email"  id="email" class="email" placeholder="Enter Your Email" required>
-                        <br>
-                        <input type="mobile"  id="number" class="number"
-                            placeholder="Enter Your Mobile Number" required>
-                        <br>
-                        <input  id="message" class="message"
-                            placeholder="Write Your Message Here" required></input>
-                        <br><br>
-                        <button class="send-btn">Send</button>
-                    </form>
-                </div>
-
-            </div>
+                <input type="email" name="email" placeholder="example@example.com" required>
+                <input type="tel" name="phone" placeholder="Phone Number" required>
+                <button type="submit" class="submit-btn">Send</button>
+            </form>
+            <p class="call-us">You may also call us at 7317477989</p>
         </div>
     </section>
     <!--========================================== Contect Section End ======================================================== -->
     <!--========================================== footer Section Start ======================================================== -->
-    <footer id="main-footer">
-        <div class="foot-box">
-            <div class="join-us">
-                <h4>JOIN US ON</h4>
-                <h6><span class="typed" style="color: #FFA600;"></span></h6>
-            </div>
-            <div class="social-icon">
+    <footer>
+        <div class="footer-container">
+            <h2>Portfolio</h2>
+            <div class="social-icons">
                 <a href=""><i class="fa-brands fa-github" style="--i: 7"></i></a>
                 <a href=""><i class="fa-brands fa-linkedin" style="--i: 8"></i></a>
                 <a href=""><i class="fa-brands fa-instagram" style="--i: 9"></i></a>
                 <a href=""><i class="fa-brands fa-twitter" style="--i: 10"></i></a>
                 <a href=""><i class="fa-brands fa-facebook" style="--i: 11"></i></a>
             </div>
-            <div class="footer-title">
-                <p>Copyright @2024 HandCreated By Me ❤️</p>
-            </div>
+            <nav class="footer-nav">
+                <a href="#">Home</a>
+                <a href="#">My Work</a>
+                <a href="#">My Clients</a>
+                <a href="#">My Blog</a>
+                <a href="#">Contact Me</a>
+            </nav>
+            <p class="footer-note">Copyright @2024 HandCreated By Me <a href="/about">❤️</a></p>
         </div>
     </footer>
     <!--========================================== Footer Section End ======================================================== -->
@@ -197,16 +189,7 @@
 
     <!-- ---------------------------------- javaScript Part ----------------------------------- -->
 
-    <!-- <script>
-        function showSidebar() {
-            const sidebar = document.querySelector('.sidebar')
-            sidebar.style.display = 'flex'
-        }
-        function hideSidebar() {
-            const sidebar = document.querySelector('.sidebar')
-            sidebar.style.display = 'none'
-        }
-    </script> -->
+    
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="/js/script.js" defer></script>
 

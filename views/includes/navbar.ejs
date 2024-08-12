@@ -1,27 +1,33 @@
 <header>
-    <div id="main-header">
-        <div class="image-name">
-            <div class="header-image">
-                <img src="/assets/Image.png" alt="My Image" class="hero-image">
-            </div>
-            <div class="name">
-                <h2>@SDE Shivam Prajapati</h2>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/assets/Image.png" alt="Logo">
+            <div class="nav-text">
+                <h1>@SDE Shivam Prajapati</h1>
                 <p>Software Engineer</p>
-                <h3>I am a <span class="typed"></span></h3>
+                <p class="change-text">I am a <span class="highlight typed"></span></p>
             </div>
         </div>
-        <div class="navbar">
-            <a href="/home" class="home" style="color:#FFA600">Home</a>
-            <a href="#skill-home">Skills</a>
-            <a href="/home/#project-home">Projects</a>
-            <a href="/home/#about-main">About</a>
-            <a href="/contact">Contact</a>
-            
+        <div class="menu" id="menu">
+            <a href="/home" class="active">Home</a>
+            <a href="/home/#skills">Skills</a>
+            <a href="/home/#projects">Projects</a>
+            <a href="/home/#about">About</a>
+            <a href="/home/#contact">Contact</a>
+            <div class="theme-toggle" onclick="toggleTheme()">
+                <i class="fa-solid fa-moon" alt="Toggle Dark Mode" id="theme-icon"></i>
+            </div>
             <!-- <a href="/singUp">SingUp</a>
             <a href="/login">Login</a> -->
         </div>
-    </div>
-
+        <div class="controls">
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </nav>
     <script src="/public/js/script.js"></script>
 </header>
 
