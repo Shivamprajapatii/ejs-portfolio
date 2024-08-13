@@ -53,8 +53,8 @@
 
     <!--========================================== Project Section Start ======================================================== -->
     <section class="projects-section" id="projects">
+        <h2>MY <span>LATEST PROJECTS</span></h2>
         <div class="project-container">
-            <h2>Recent <span>Projects</span></h2>
             <div class="projects-grid">
                 <% for(let project of projectData) { %>
                 <div class="project-card">
@@ -62,7 +62,7 @@
                         <img src="<%= project.image %>" alt="Project">
                     </div>
                     <h3><%= project.title %></h3>
-                    <a href="/project/<%= project._id %>" class="btn-view">Click Me!</a>
+                    <a href="/project/<%= project._id %>" class="btn-view">VIEW PROJECT</a>
                 </div>
                 <% } %>
 
@@ -144,7 +144,74 @@
             </div>
         </div>
     </section>
-    <!--========================================== Skill Section End ======================================================== -->
+<!--========================================== Skill Section End ======================================================== -->
+<!--========================================== Certificate Section End ======================================================== -->
+    <section class="certificate-section" id="certificate-section">
+        <h2>My Certificates</h2>
+        <div class="certificates-container">
+            <!-- Certificate Card 1 -->
+            <div class="certificate-card" onclick="openModal('modal1')">
+                <img src="/assets/Apna College Certificate.png" alt="Web Development Certificate">
+                <div class="certificate-title">Web Development Certificate</div>
+                <div class="certificate-issuer">Issued by XYZ Academy</div>
+                <a href="#certificate-section" class="view-details">View Details</a>
+            </div>
+    
+            <!-- Certificate Card 2 -->
+            <div class="certificate-card" onclick="openModal('modal2')">
+                <img src="/assets/SIES Hackthone.jpeg" alt="Data Science Certificate">
+                <div class="certificate-title">Data Science Certificate</div>
+                <div class="certificate-issuer">Issued by ABC Institute</div>
+                <a href="#certificate-section" class="view-details">View Details</a>
+            </div>
+    
+            <!-- Add more certificates as needed -->
+        </div>
+    
+        <!-- Modal 1 -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="modal-close" onclick="closeModal('modal1')">&times;</span>
+                <div class="modal-title">Web Development Certificate</div>
+                <div class="modal-issuer">Issued by XYZ Academy</div>
+                <div class="modal-skills">Skills Learned: HTML, CSS, JavaScript, Responsive Design, React.js</div>
+            </div>
+        </div>
+    
+        <!-- Modal 2 -->
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="modal-close" onclick="closeModal('modal2')">&times;</span>
+                <div class="modal-title">Data Science Certificate</div>
+                <div class="modal-issuer">Issued by ABC Institute</div>
+                <div class="modal-skills">Skills Learned: Python, Data Analysis, Machine Learning, Data Visualization</div>
+            </div>
+        </div>    
+    </section>
+<!--========================================== Certificate Section End ======================================================== -->
+<!--========================================== FAQ Section Start ======================================================== -->
+    <section class="FAQ-section">
+        <div class="faq-container">
+            <h2>FAQ Section</h2>
+
+            <details>
+                <summary>Which technologies are used in this portfolio?</summary>
+                <p>Three technologies are used in this portfolio: HTML for structure, CSS for design, and JavaScript for functionality.</p>
+            </details>
+        
+            <details>
+                <summary>Is there light mode?</summary>
+                <p><strong>Yes,</strong> you can enable light mode by clicking on the hamburger icon and selecting the light mode option.</p>
+            </details>
+        
+            <details>
+                <summary>Is it responsive?</summary>
+                <p>Yes, this portfolio is fully responsive and adapts to different screen sizes.</p>
+            </details>
+        </div>
+    </section>
+
+    <!--========================================== FAQ Section End ======================================================== -->
     <!--========================================== Contect Section End ======================================================== -->
     <section id="contact-main-box">
         <div class="contact-form-container">
@@ -181,7 +248,7 @@
                 <a href="#">My Blog</a>
                 <a href="#">Contact Me</a>
             </nav>
-            <p class="footer-note">Copyright @2024 HandCreated By Me <a href="/about">❤️</a></p>
+            <p class="footer-note">Copyright @2024 HandCreated By Me <a href="/login">❤️</a></p>
         </div>
     </footer>
     <!--========================================== Footer Section End ======================================================== -->

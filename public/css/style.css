@@ -9,7 +9,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'poppins', sans-serif,'Arial' !important;
+    font-family: 'poppins', sans-serif, 'Arial' !important;
     min-height: 100vh;
     overflow-x: hidden;
     background-color: var(--background-color);
@@ -47,12 +47,13 @@ body.dark {
     max-width: 1200px;
     margin-left: 2.5rem;
     display: flex;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     align-items: center;
     padding: 10px 20px;
     background-color: var(--background-color);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+    margin: auto;
 }
 
 .logo {
@@ -153,7 +154,7 @@ body.dark {
 }
 
 .theme-toggle i {
-   size: 1rem;
+    size: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -175,17 +176,28 @@ body.dark {
     .hamburger {
         display: flex;
     }
-} 
+}
 
 /*================================= Header Section End ======================= */
 
 
 /*================================= Preject Section  Start ======================= */
 
+.project-section {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background-color: var(--background-color);
+    overflow: hidden;
+    margin: 50px 0;
+}
+
 .project-container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: auto;
     padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
 }
 
 .projects-section h2 {
@@ -202,8 +214,7 @@ body.dark {
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 40px;
-    margin: auto;
+    gap: 10px;
 }
 
 .project-card {
@@ -217,18 +228,25 @@ body.dark {
     align-items: center;
     text-align: center;
     border: 1px solid #fff;
+    margin: auto;
 }
 
 .project-card:hover {
     transform: translateY(-10px);
 }
+
 .project-image {
-    background-size: cover; /* Ensures the image covers the container */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-size: cover;
+    /* Ensures the image covers the container */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
     width: 150px;
-    height: 150px; /* Example height, adjust as needed */
-    border-radius: 50%; /* Matches the border-radius of the container */
+    height: 150px;
+    /* Example height, adjust as needed */
+    border-radius: 50%;
+    /* Matches the border-radius of the container */
     border: 1px solid black;
     position: relative;
     overflow: hidden;
@@ -243,7 +261,8 @@ body.dark {
     border-bottom: 2px solid #fbc02d;
     border-radius: 15px 15px 0 0;
     transition: transform 0.3s ease;
-    opacity: 0; /* Hide the img tag visually but keep it for SEO/alt text */
+    opacity: 0;
+    /* Hide the img tag visually but keep it for SEO/alt text */
     position: absolute;
 }
 
@@ -262,19 +281,21 @@ body.dark {
     display: inline-block;
     margin-bottom: 15px;
     padding: 10px 20px;
-    background-color: #fbc02d;
-    color: #fff;
-    border-radius: 50px;
-    border: 1px solid black;
+    background-color: var(--background-color);
+    color: #FF014F;
+    border-radius: 10px;
+    border: 0.02px solid black;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: small;
     text-align: center;
     transition: background-color 0.3s;
     text-decoration: none;
 }
 
 .btn-view:hover {
-    background-color: #f57c00;
+    background-color: #FF014F;
+    color: white;
 }
 
 @media (max-width: 768px) {
@@ -293,10 +314,8 @@ body.dark {
     background-color: #fff;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    background-color: var(--background-color);
     overflow: hidden;
     margin: 50px 0;
-    
 }
 
 .about-section h2 {
@@ -317,6 +336,7 @@ body.dark {
     padding: 5px 0px 0px 0px;
     border: 2px solid #fbc02d;
     border-radius: 1rem;
+    margin: auto;
 }
 
 .profile-image {
@@ -335,8 +355,9 @@ body.dark {
 .about-text {
     flex: 2;
     padding: 10px;
-    
+
 }
+
 .about-text p {
     text-align: start;
 }
@@ -344,6 +365,7 @@ body.dark {
 .about-text .btn-download {
     color: black;
 }
+
 .about-text h2 {
     font-size: 2.5rem;
     color: #333;
@@ -435,7 +457,7 @@ body.dark {
 .skill-card {
     border: 2px solid #ddd;
     border-radius: 10px;
-    padding: 20px;
+    padding-right: 10px;
     width: 200px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -444,7 +466,7 @@ body.dark {
 .skill-card h2 {
     font-size: 1.5rem;
     margin-bottom: 15px;
-    color: var(--text-color); 
+    color: var(--text-color);
 }
 
 .skill-card ul {
@@ -457,7 +479,7 @@ body.dark {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: var(--text-color); 
+    color: var(--text-color);
 }
 
 .skill-card img {
@@ -478,6 +500,185 @@ body.dark {
 
 /*================================= Skill Section End ======================= */
 
+/*================================= Certificate Section Start ======================= */
+.certificate-section {
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.certificate-section h2 {
+    text-align: center;
+    color: #333;
+}
+.certificates-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+}
+.certificates-container .certificate-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.certificates-container .certificate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.certificate-card  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.certificate-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.certificate-issuer {
+    color: #777;
+    margin-bottom: 10px;
+}
+.certificates-container .view-details {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+.modal .modal-content {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s;
+}
+.modal-content  .modal-close {
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #999;
+}
+.modal-content  .modal-close:hover {
+    color: #333;
+}
+.modal-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.modal-issuer,
+.modal-skills {
+    margin-bottom: 10px;
+    color: #555;
+}
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+/* Responsive */
+@media (max-width: 600px) {
+    .certificates-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/*================================= Certificate Section End ======================= */
+
+/*================================= FAQ Section Start ======================= */
+.FAQ-section {
+    background-color: #fff;
+    background-color: var(--background-color);
+    overflow: hidden;
+    margin: 50px 0;
+}
+
+.faq-container {
+    color: #000;
+    max-width: 1200px;
+    gap: 10px;
+    margin: auto;
+    padding: 10px;
+}
+
+.faq-container h2 {
+    text-align: center;
+    color: #333;
+}
+
+.faq-container details {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.faq-container details:hover {
+    border-color: #007bff;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+.faq-container summary {
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    list-style: none;
+}
+
+.faq-container summary:hover {
+    color: #007bff;
+}
+
+.faq-container details[open] {
+    background-color: #e9f5ff;
+    border-color: #007bff;
+}
+
+.faq-container p {
+    margin-top: 10px;
+    line-height: 1.6;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.faq-container details[open] p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*================================= FAQ Section End ======================= */
 
 /*================================ Contact Details Section Another Page Start ========================================*/
 
@@ -649,6 +850,7 @@ footer {
         opacity: 0;
         transform: translateY(-10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -660,7 +862,7 @@ footer {
     .footer-container h2 {
         font-size: 28px;
     }
-    
+
     .social-icons a {
         font-size: 16px;
         margin: 0 8px;
